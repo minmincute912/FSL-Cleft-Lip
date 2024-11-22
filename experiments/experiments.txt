@@ -1,5 +1,4 @@
 # Proto Net experiments
-# Proto Net experiments với CleftLip dataset
 python3 -m experiments.proto_nets --dataset cleft_lip --k-train 2 --k-test 2 --n-train 1 --n-test 1
 python3 -m experiments.proto_nets --dataset cleft_lip --k-train 2 --k-test 2 --n-train 5 --n-test 5
 python3 -m experiments.proto_nets --dataset cleft_lip --k-test 2 --n-test 1 --k-train 2 --n-train 1 --q-train 15
