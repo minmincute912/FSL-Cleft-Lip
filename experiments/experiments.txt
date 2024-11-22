@@ -1,0 +1,17 @@
+# Proto Net experiments
+# Proto Net experiments với CleftLip dataset
+python3 -m experiments.proto_nets --dataset cleft_lip --k-train 2 --k-test 2 --n-train 1 --n-test 1
+python3 -m experiments.proto_nets --dataset cleft_lip --k-train 2 --k-test 2 --n-train 5 --n-test 5
+python3 -m experiments.proto_nets --dataset cleft_lip --k-test 2 --n-test 1 --k-train 2 --n-train 1 --q-train 15
+
+# Matching Network experiments
+python3 -m experiments.matching_nets --dataset cleft_lip --fce True --k-test 2 --n-test 1 --distance l2
+python3 -m experiments.matching_nets --dataset cleft_lip --fce True --k-test 2 --n-test 5 --distance cosine
+
+# 1st order MAML
+python3 -m experiments.maml --dataset cleft_lip --order 1 --n 1 --k 2 --eval-batches 10 --epoch-len 50
+python3 -m experiments.maml --dataset cleft_lip --order 1 --n 5 --k 2 --eval-batches 10 --epoch-len 50
+
+# 2nd order MAML
+python3 -m experiments.maml --dataset cleft_lip --order 2 --n 1 --k 2 --eval-batches 10 --epoch-len 50
+python3 -m experiments.maml --dataset cleft_lip --order 2 --n 5 --k 2 --eval-batches 20 --epoch-len 100
