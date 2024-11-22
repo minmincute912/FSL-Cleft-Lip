@@ -1,0 +1,101 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+logs/
+log/
+
+# Local development settings
+local_settings.py
+db.sqlite3
+
+# Dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation
+docs/_build/
+
+# Docker
+.docker/
+docker-compose.override.yml
+docker-compose.override.yaml
+Dockerfile.dev
+*.dockerfile
+
+# Docker volumes
+docker_data/
+data/
+postgres-data/
+mysql-data/
+redis-data/
+mongo-data/
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# CI/CD
+.gitlab-ci-local/
+
+# Node (in case of frontend)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
