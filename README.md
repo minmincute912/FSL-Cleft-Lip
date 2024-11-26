@@ -1,10 +1,8 @@
 # FSL_Cleft_Lip
-<<<<<<< HEAD
 Training and Inference for Recognizing the Cleft Lip in the Fetal 3D Ultrasound Image by Using Few Shot Learning
 =======
-Training and Inference for Recognizing the Cleft Lip in the Fetal 3D Ultrasound Image
 
-This repository implements few-shot learning techniques, such as **Prototypical Networks** and **Matching Networks**, to classify fetal 3D ultrasound images into two categories: `cleft` and `non-cleft`. It leverages PyTorch and includes complete code for training, evaluating, and inferring on new query data.
+This repository implements few-shot learning techniques, such as **Prototypical Networks** and **Matching Networks**, to classify fetal 3D ultrasound images into two categories: `cleft` and `non-cleft`. It leverages PyTorch and includes complete code for training, evaluating, and inferring new query data.
 
 ---
 
@@ -61,7 +59,7 @@ This repository implements few-shot learning techniques, such as **Prototypical 
 ### Dataset Structure
 
 Ensure your dataset follows this structure:
-
+```bash
 fetal_3dultrasound/
 ├── cleftlip_data/
 │   ├── images_background/
@@ -77,28 +75,29 @@ fetal_3dultrasound/
 ├── test/
     ├── query1.png
     ├── query2.png
-
+```
 ## Usage
 
 ### Training
 
 Train the Prototypical Network
-    ```bash
-    python experiments/proto_nets.py \
-    --dataset cleft_lip \
+```bash
+   python experiments/proto_nets.py \
+   --dataset cleft_lip \
     --n-train 1 --k-train 2 --q-train 15 \
     --n-test 1 --k-test 2 --q-test 1 \
     --distance l2
-
+```
 ### Inference
 
 Perform inference using a trained model
-    ```bash
+```bash
     python inference.py \
     --support_dir /path/to/images_background \
     --query_dir /path/to/test \
     --checkpoint /path/to/checkpoint.pth \
     --distance l2
+```
 
 ## Configuration
 
@@ -109,7 +108,7 @@ Update the 'config.py' file for paths and global settings:
 # Update the dataset and model paths
 DATA_PATH = "/path/to/fetal_3dultrasound"
 PATH = "/path/to/save/models"
-
+```
 ## Contributing 
 
 Contributions are welcome! To contribute:
@@ -117,13 +116,14 @@ Contributions are welcome! To contribute:
 2. Create a feature branch:
 ```bash
 git checkout -b feature-name
+```
 3. Commit changes:
 ```bash
 git commit -m "Add feature"
+```
 4. Push changes and create a pull request.
 
 ## License
 
 This project is licensed under the MIT License. See the 'LICENSE' for details.
 Feel free to contact [dominh9122002@gmail.com] for questions of further clarifications!
->>>>>>> c9d6eef (Add README.md)
