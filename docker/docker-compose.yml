@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  cleftlip:
+    build: .
+    container_name: cleftlip_container
+    ports:ở 
+      - "5000:5000" 
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all  
+    volumes:
+      - .:/cleftlip 
+    working_dir: /cleftlip
+    entrypoint: ["python3"]
+    command: ["experiments/proto_nets.py", "--dataset", "cleft_lip", "--n-train", "1", "--k-train", "2", "--q-train", "15", "--n-test", "1", "--k-test", "2", "--q-test", "1", "--distance", "l2"]
+    runtime: nvidia  
