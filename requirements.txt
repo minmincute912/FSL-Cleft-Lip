@@ -22,7 +22,7 @@ dask==2024.11.2
 dbus-python==1.2.18
 debugpy==1.8.8
 decorator==5.1.1
-defusedxml==0.7.1
+defusedxml==0.7.1  
 entrypoints==0.4
 exceptiongroup==1.2.2
 executing==2.1.0
@@ -144,7 +144,7 @@ tinycss2==1.4.0
 tomli==2.1.0
 toolz==1.0.0
 torch==2.5.1
-torchaudio==2.5.1+cu118
+torchaudio==2.5.1
 torchvision==0.20.1
 tornado==6.4.1
 tqdm==4.67.0
